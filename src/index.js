@@ -10,6 +10,7 @@ import thunk from "redux-thunk";
 import { reactReduxFirebase, getFirebase } from "react-redux-firebase";
 import { reduxFirestore, getFirestore } from "redux-firestore";
 import fbConfig from "./config/fbConfig";
+//import firebase from "firebase/app";
 
 const store = createStore(
   RootReducer,
@@ -19,6 +20,12 @@ const store = createStore(
     reactReduxFirebase(fbConfig)
   )
 );
+
+// const rrfProps = {
+//   firebase,
+//   config: fbConfig,
+//   dispatch: store.dispatch,
+// };
 
 ReactDOM.render(
   <React.StrictMode>
